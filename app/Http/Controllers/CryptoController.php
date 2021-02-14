@@ -123,8 +123,8 @@ class CryptoController extends Controller
     {
         $coinId = $request->input('coinId', $this->defaultCoin);
         $vsCurrency = $request->input('vsCurrency', $this->defaultCurrency);
-        $from = $request->input('from', null);
-        $to = $request->input('to', null);
+        $from = $request->input('from', '');
+        $to = $request->input('to', '');
         return $this->client->coins()->getMarketChartRange($coinId, $vsCurrency, $from, $to);
     }
 

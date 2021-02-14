@@ -18,6 +18,6 @@ Route::get('/crypto/index', function () {
     return view('welcome');
 });
 
-Route::get('/crypto/markets', 'App\Http\Controllers\CryptoController@markets');
+Route::get('/crypto/markets', 'App\Http\Controllers\CryptoController@marketList');
 Route::get('/crypto/price', 'App\Http\Controllers\CryptoController@price');
 
