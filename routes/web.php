@@ -38,3 +38,5 @@ Route::get('/crypto/globaldata', 'App\Http\Controllers\CryptoController@globalDa
 Route::get('/crypto/finance', 'App\Http\Controllers\CryptoController@finance');
 Route::get('/crypto/financeproducts', 'App\Http\Controllers\CryptoController@financeProducts');
 
+Route::get('/wallet', 'App\Http\Controllers\BinanceController@index');
+
