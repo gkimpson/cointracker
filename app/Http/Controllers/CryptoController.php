@@ -19,7 +19,7 @@ class CryptoController extends Controller
 
     public function index()
     {
-    
+
     }
 
     public function ping()
@@ -43,8 +43,8 @@ class CryptoController extends Controller
      */
     public function tokenPrice(Request $request)
     {
-        $id = $request->input('id', null);
-        $contractAddresses = $request->input('contractAddresses', null);
+        $id = $request->input('id', $this->defaultCoin); // e.g 'ethereum'
+        $contractAddresses = $request->input('contractAddresses', null); // e.g '0xE41d2489571d322189246DaFA5ebDe1F4699F498'
         $vsCurrencies = $request->input('vsCurrencies', $this->defaultCurrency);
         $params = $request->input('params', []);
         return $this->client->simple()->getTokenPrice($id, $contractAddresses, $vsCurrencies, $params);
@@ -81,20 +81,20 @@ class CryptoController extends Controller
      */
     public function coin(Request $request)
     {
-        $vsCurrency = $request->input('vsCurrency', $this->defaultCurrency);
+        $id = $request->input('id', $this->defaultCoin);
         $tickers = $request->input('tickers', false);
         $marketData = $request->input('marketData', false);
-        return $this->client->coins()->getCoin($vsCurrency, ['tickers' => $tickers, 'market_data' => $marketData]);
+        return $this->client->coins()->getCoin($id, ['tickers' => $tickers, 'market_data' => $marketData]);
     }
 
     /**
      * Get coin tickers (paginated to 100 items)
      */
-    public function tickers(Request $request) 
+    public function tickers(Request $request)
     {
-        $vsCurrency = $request->input('vsCurrency', $this->defaultCurrency);
+        $id = $request->input('id', $this->defaultCoin);
         $params = $request->input('params', []);
-        return $this->client->coins()->getTickers($vsCurrency, $params);
+        return $this->client->coins()->getTickers($id, $params);
     }
 
     /**
@@ -102,10 +102,10 @@ class CryptoController extends Controller
      */
     public function history(Request $request)
     {
-        $vsCurrency = $request->input('vsCurrency', $this->defaultCurrency);
+        $id = $request->input('id', $this->defaultCoin);
         $date = $request->input('date', null); // e.g '30-12-2020'
         $params = $request->input('params', []);
-        return $this->client->coins()->getHistory($vsCurrency, $date, $params);
+        return $this->client->coins()->getHistory($id, $date, $params);
     }
 
     /**
@@ -113,25 +113,25 @@ class CryptoController extends Controller
      */
     public function marketChart(Request $request)
     {
-        $coinId = $request->input('coinId', $this->defaultCoin);
+        $id = $request->input('id', $this->defaultCoin);
         $vsCurrency = $request->input('vsCurrency', $this->defaultCurrency);
         $days = $request->input('days', 'max');
-        return $this->client->coins()->getMarketChart($coinId, $vsCurrency, $days);
+        return $this->client->coins()->getMarketChart($id, $vsCurrency, $days);
     }
 
     public function marketChartRange(Request $request)
     {
-        $coinId = $request->input('coinId', $this->defaultCoin);
+        $id = $request->input('id', $this->defaultCoin);
         $vsCurrency = $request->input('vsCurrency', $this->defaultCurrency);
         $from = $request->input('from', '');
         $to = $request->input('to', '');
-        return $this->client->coins()->getMarketChartRange($coinId, $vsCurrency, $from, $to);
+        return $this->client->coins()->getMarketChartRange($id, $vsCurrency, $from, $to);
     }
 
     public function marketChartRangeBeta(Request $request)
     {
-        $coinId = $request->input('coinId', $this->defaultCoin);
-        return $this->client->coins()->getStatusUpdates($coinId);
+        $id = $request->input('id', $this->defaultCoin);
+        return $this->client->coins()->getStatusUpdates($id);
     }
 
 }
