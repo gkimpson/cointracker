@@ -29,4 +29,12 @@ Route::get('/crypto/history', 'App\Http\Controllers\CryptoController@history');
 Route::get('/crypto/marketchart', 'App\Http\Controllers\CryptoController@marketChart');
 Route::get('/crypto/marketchartrange', 'App\Http\Controllers\CryptoController@marketChartRange');
 Route::get('/crypto/marketchartrangebeta', 'App\Http\Controllers\CryptoController@marketChartRangeBeta');
+Route::get('/crypto/exchanges', 'App\Http\Controllers\CryptoController@exchanges');
+Route::get('/crypto/exchange', 'App\Http\Controllers\CryptoController@exchange');
+Route::get('/crypto/volumechart', 'App\Http\Controllers\CryptoController@volumeChart');
+Route::get('/crypto/statusupdates', 'App\Http\Controllers\CryptoController@statusUpdates');
+Route::get('/crypto/events', 'App\Http\Controllers\CryptoController@events');
+Route::get('/crypto/globaldata', 'App\Http\Controllers\CryptoController@globalData');
+Route::get('/crypto/finance', 'App\Http\Controllers\CryptoController@finance');
+Route::get('/crypto/financeproducts', 'App\Http\Controllers\CryptoController@financeProducts');
 

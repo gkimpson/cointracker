@@ -1,0 +1,544 @@
+{
+	"info": {
+		"_postman_id": "2c02cf80-6757-44af-ace2-96dae9399107",
+		"name": "CoinGecko",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "rapidapi - markets",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-rapidapi-host",
+						"value": "coingecko.p.rapidapi.com"
+					},
+					{
+						"key": "x-rapidapi-key",
+						"value": "cd6109154fmsh9e4a4ca14c637a6p1a5719jsnb8956751a350"
+					}
+				],
+				"url": {
+					"raw": "https://coingecko.p.rapidapi.com/coins/markets?vs_currency=usd&page=1&per_page=100&order=market_cap_desc",
+					"protocol": "https",
+					"host": [
+						"coingecko",
+						"p",
+						"rapidapi",
+						"com"
+					],
+					"path": [
+						"coins",
+						"markets"
+					],
+					"query": [
+						{
+							"key": "vs_currency",
+							"value": "usd"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "per_page",
+							"value": "100"
+						},
+						{
+							"key": "order",
+							"value": "market_cap_desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api - price ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cryptoapi.test/crypto/price",
+					"protocol": "https",
+					"host": [
+						"cryptoapi",
+						"test"
+					],
+					"path": [
+						"crypto",
+						"price"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api - markets  ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cryptoapi.test/crypto/markets",
+					"protocol": "https",
+					"host": [
+						"cryptoapi",
+						"test"
+					],
+					"path": [
+						"crypto",
+						"markets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api - coins ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cryptoapi.test/crypto/coins",
+					"protocol": "https",
+					"host": [
+						"cryptoapi",
+						"test"
+					],
+					"path": [
+						"crypto",
+						"coins"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api - tokenprice  ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cryptoapi.test/crypto/tokenprice?id=ethereum&contractAddresses=0xE41d2489571d322189246DaFA5ebDe1F4699F498&vsCurrencies=gbp",
+					"protocol": "https",
+					"host": [
+						"cryptoapi",
+						"test"
+					],
+					"path": [
+						"crypto",
+						"tokenprice"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "ethereum"
+						},
+						{
+							"key": "contractAddresses",
+							"value": "0xE41d2489571d322189246DaFA5ebDe1F4699F498"
+						},
+						{
+							"key": "vsCurrencies",
+							"value": "gbp"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api - currencies  ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cryptoapi.test/crypto/currencies",
+					"protocol": "https",
+					"host": [
+						"cryptoapi",
+						"test"
+					],
+					"path": [
+						"crypto",
+						"currencies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api - coin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cryptoapi.test/crypto/coin?id=bitcoin&tickers=true&marketData=true",
+					"protocol": "https",
+					"host": [
+						"cryptoapi",
+						"test"
+					],
+					"path": [
+						"crypto",
+						"coin"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "bitcoin"
+						},
+						{
+							"key": "tickers",
+							"value": "true"
+						},
+						{
+							"key": "marketData",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api - tickers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cryptoapi.test/crypto/tickers",
+					"protocol": "https",
+					"host": [
+						"cryptoapi",
+						"test"
+					],
+					"path": [
+						"crypto",
+						"tickers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api - history",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cryptoapi.test/crypto/history?id=bitcoin&date=30-12-2020",
+					"protocol": "https",
+					"host": [
+						"cryptoapi",
+						"test"
+					],
+					"path": [
+						"crypto",
+						"history"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "bitcoin"
+						},
+						{
+							"key": "date",
+							"value": "30-12-2020"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api - marketchart",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cryptoapi.test/crypto/marketchart?id=ethereum&vsCurrency=usd&days=7",
+					"protocol": "https",
+					"host": [
+						"cryptoapi",
+						"test"
+					],
+					"path": [
+						"crypto",
+						"marketchart"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "ethereum"
+						},
+						{
+							"key": "vsCurrency",
+							"value": "usd"
+						},
+						{
+							"key": "days",
+							"value": "7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api - marketchartrange",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cryptoapi.test/crypto/marketchartrange?id=bitcoin&vsCurrency=usd&from=30-01-2021",
+					"protocol": "https",
+					"host": [
+						"cryptoapi",
+						"test"
+					],
+					"path": [
+						"crypto",
+						"marketchartrange"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "bitcoin"
+						},
+						{
+							"key": "vsCurrency",
+							"value": "usd"
+						},
+						{
+							"key": "from",
+							"value": "30-01-2021"
+						},
+						{
+							"key": "to",
+							"value": "30-01-2021",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api - marketchartrangebeta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cryptoapi.test/crypto/marketchartrangebeta?id=bitcoin",
+					"protocol": "https",
+					"host": [
+						"cryptoapi",
+						"test"
+					],
+					"path": [
+						"crypto",
+						"marketchartrangebeta"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "bitcoin"
+						},
+						{
+							"key": "vsCurrency",
+							"value": "usd",
+							"disabled": true
+						},
+						{
+							"key": "from",
+							"value": "30-01-2021",
+							"disabled": true
+						},
+						{
+							"key": "to",
+							"value": "30-02-2021",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api - exchanges",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cryptoapi.test/crypto/exchanges",
+					"protocol": "https",
+					"host": [
+						"cryptoapi",
+						"test"
+					],
+					"path": [
+						"crypto",
+						"exchanges"
+					],
+					"query": [
+						{
+							"key": "to",
+							"value": "30-01-2021",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api - exchange",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cryptoapi.test/crypto/exchange?exchange=binance",
+					"protocol": "https",
+					"host": [
+						"cryptoapi",
+						"test"
+					],
+					"path": [
+						"crypto",
+						"exchange"
+					],
+					"query": [
+						{
+							"key": "exchange",
+							"value": "binance"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api - volume chart",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cryptoapi.test/crypto/volumechart",
+					"protocol": "https",
+					"host": [
+						"cryptoapi",
+						"test"
+					],
+					"path": [
+						"crypto",
+						"volumechart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api - events",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cryptoapi.test/crypto/events",
+					"protocol": "https",
+					"host": [
+						"cryptoapi",
+						"test"
+					],
+					"path": [
+						"crypto",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api - status updates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cryptoapi.test/crypto/statusupdates",
+					"protocol": "https",
+					"host": [
+						"cryptoapi",
+						"test"
+					],
+					"path": [
+						"crypto",
+						"statusupdates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api - global data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cryptoapi.test/crypto/globaldata",
+					"protocol": "https",
+					"host": [
+						"cryptoapi",
+						"test"
+					],
+					"path": [
+						"crypto",
+						"globaldata"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api - finance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cryptoapi.test/crypto/finance",
+					"protocol": "https",
+					"host": [
+						"cryptoapi",
+						"test"
+					],
+					"path": [
+						"crypto",
+						"finance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "api - finance products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://cryptoapi.test/crypto/financeproducts",
+					"protocol": "https",
+					"host": [
+						"cryptoapi",
+						"test"
+					],
+					"path": [
+						"crypto",
+						"financeproducts"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
