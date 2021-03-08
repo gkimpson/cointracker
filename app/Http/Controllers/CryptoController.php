@@ -259,7 +259,15 @@ class CryptoController extends Controller
      */
     public function financeProducts()
     {
-        return $this->client->events()->getTypes();;
         return $this->client->finance()->getProducts();
+    }
+
+    /**
+     * Top-7 trending coins on CoinGecko as searched by users in the last 24 hours (Ordered by most popular first)
+     * @return \Illuminate\Http\Client\Response
+     */
+    public function trending()
+    {
+        return Http::get('https://api.coingecko.com/api/v3/search/trending');
     }
 }
